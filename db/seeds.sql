@@ -14,7 +14,7 @@ VALUES
     ('Lead Engineer', 150000, 2),
     ('Junior Engineer', 120000, 2),
     ('Accountant', 125000, 3),
-    ('Legal Lead', 250000, 4),
+    ('Legal Lead', 250000, 4);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id) 
 VALUES

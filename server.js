@@ -22,7 +22,7 @@ db.connect((err) => {
   });
 
   db.query("SELECT * FROM employee", (err, res) => {
-    employees = employee.map((employee) => ({
+    employees = res.map((employee) => ({
       first_name: employee.first_name,
       last_name: employee.last_name,
       value: employee.id,
