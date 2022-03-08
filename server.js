@@ -73,7 +73,8 @@ function init() {
       ],
     })
     .then((res) => {
-      mainMenu(res.choices);
+      console.log(res);
+      mainMenu(res.mainMenu);
     });
 }
 
@@ -145,8 +146,8 @@ function addDepartment() {
           if (err) throw err;
         }
       );
+      reset();
     });
-  reset();
 }
 
 function addRole() {
@@ -181,8 +182,8 @@ function addRole() {
           if (err) throw err;
         }
       );
+      reset();
     });
-  reset();
 }
 
 function addEmployee() {
@@ -224,8 +225,8 @@ function addEmployee() {
           if (err) throw err;
         }
       );
+      reset();
     });
-  reset();
 }
 
 function updateRole() {
@@ -251,8 +252,8 @@ function updateRole() {
           if (err) throw err;
         }
       );
+      reset();
     });
-  reset();
 }
 
 function reset() {
@@ -269,5 +270,5 @@ function reset() {
 function exit() {
   console.log("Exiting database");
   db.end();
-  process.end();
+  process.exit();
 }
