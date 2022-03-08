@@ -1,5 +1,5 @@
-// const { restoreDefaultPrompts } = require("inquirer");
 const inquirer = require("inquirer");
+const confirm = require("inquirer-confirm");
 const db = require("./db/connection");
 
 db.connect((err) => {
@@ -7,6 +7,7 @@ db.connect((err) => {
   console.log("Connected to employee database.");
 
   db.query("SELECT * FROM department", (err, res) => {
+    console.log(res);
     departments = res.map((depart) => ({
       name: depart.name,
       value: depart.id,

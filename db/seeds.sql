@@ -3,26 +3,25 @@ USE employee_db;
 INSERT INTO department (name)
 VALUES
     ('Sales'),
-    ('Engineering'),
+    ('Programming'),
     ('Finance'),
     ('Legal');
 
 INSERT INTO role (title, salary, department_id)
 VALUES
     ('Sales Lead', 100000, 1),
-    ('Salesperson', 80000, 1),
+    ('Sales Person', 80000, 1),
     ('Lead Engineer', 150000, 2),
-    ('Software Engineer', 120000, 2),
+    ('Junior Engineer', 120000, 2),
     ('Accountant', 125000, 3),
-    ('Legal Team Lead', 250000, 4),
-    ('Lawyer', 190000, 4);
+    ('Legal Lead', 250000, 4),
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id) 
 VALUES
-    ('John', 'Doe', 1, 'Ashley Rodriguez'),
-    ('Mike', 'Chan', 2, 'John Doe'),
-    ('Ashley', 'Rodriguez', 3, null),
-    ('Kevin', 'Tupik', 4, 'Ashley Rodriguez'),
+    ('Jeff', 'Moe', 1, 'Ash Katchum'),
+    ('Jake', 'Hanson', 2, 'Jeff Moe'),
+    ('Ash', 'Katchum', 3, null),
+    ('Jeffers', 'Tupack', 4, 'Ash Katchum'),
     ('Malia', 'Brown', 5, null),
-    ('Sarah', 'Lourd', 6, null),
-    ('Tom', 'Allen', 7, 'Sarah Lourd');
+    ('Sara', 'Mara', 6, null),
+    ('Frank', 'Franklin', 7, 'Sara Mara');
